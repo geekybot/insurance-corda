@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0c56aa33-fdb3-4522-9693-6fc530ed6730" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/.idea/runConfigurations/Debug_CorDapp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/.idea/runConfigurations/Run_Contract_Tests___Java.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/.idea/runConfigurations/Run_Contract_Tests___Kotlin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/.idea/runConfigurations/Run_Example_Cordapp___Java.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/.idea/runConfigurations/Run_Example_Cordapp___Kotlin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/.idea/runConfigurations/Run_Flow_Tests___Java.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/.idea/runConfigurations/Run_Flow_Tests___Kotlin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/.idea/runConfigurations/Run_Integration_Tests___Java.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/.idea/runConfigurations/Run_Integration_Tests___Kotlin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/.idea/runConfigurations/Unit_tests.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/.vscode/settings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/.vscode/tasks.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/LICENCE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/TRADEMARK" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/clients/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/clients/src/main/java/com/insurance/server/JavaClientRpc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/clients/src/main/kotlin/com/insurance/server/MainController.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/clients/src/main/kotlin/com/insurance/server/NodeRPCConnection.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/clients/src/main/kotlin/com/insurance/server/Server.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/clients/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/clients/src/main/resources/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/clients/src/main/resources/public/js/angular-module.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/config/dev/log4j2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/contracts-java/bin/main/com/insurance/contract/IOUContract$Commands$Create.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/contracts-java/bin/main/com/insurance/contract/IOUContract$Commands.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/contracts-java/bin/main/com/insurance/contract/IOUContract.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/contracts-java/bin/main/com/insurance/schema/IOUSchema.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/contracts-java/bin/main/com/insurance/schema/IOUSchemaV1$PersistentIOU.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/contracts-java/bin/main/com/insurance/schema/IOUSchemaV1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/contracts-java/bin/main/com/insurance/state/IOUState.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/contracts-java/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/contracts-java/src/main/java/com/insurance/contract/IOUContract.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/contracts-java/src/main/java/com/insurance/schema/IOUSchema.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/contracts-java/src/main/java/com/insurance/schema/IOUSchemaV1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/contracts-java/src/main/java/com/insurance/state/IOUState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/contracts-kotlin/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/contracts-kotlin/src/main/kotlin/com/insurance/contract/CollectiblesContract.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/contracts-kotlin/src/main/kotlin/com/insurance/contract/IOUContract.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/contracts-kotlin/src/main/kotlin/com/insurance/contract/UserRegistrationContract.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/contracts-kotlin/src/main/kotlin/com/insurance/contract/UserTransactionContract.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/contracts-kotlin/src/main/kotlin/com/insurance/schema/Collectibles.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/contracts-kotlin/src/main/kotlin/com/insurance/schema/IOUSchema.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/contracts-kotlin/src/main/kotlin/com/insurance/schema/UserDetails.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/contracts-kotlin/src/main/kotlin/com/insurance/schema/UserTransactionDetailsSchema.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/contracts-kotlin/src/main/kotlin/com/insurance/state/CollectiblesState.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/contracts-kotlin/src/main/kotlin/com/insurance/state/IOUState.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/contracts-kotlin/src/main/kotlin/com/insurance/state/UserState.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/contracts-kotlin/src/main/kotlin/com/insurance/state/UserTransactionState.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/lib/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/lib/quasar.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/repositories.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/workflows-java/bin/main/com/insurance/flow/ExampleFlow$Acceptor$1SignTxFlow.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/workflows-java/bin/main/com/insurance/flow/ExampleFlow$Acceptor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/workflows-java/bin/main/com/insurance/flow/ExampleFlow$Initiator$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/workflows-java/bin/main/com/insurance/flow/ExampleFlow$Initiator$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/workflows-java/bin/main/com/insurance/flow/ExampleFlow$Initiator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/workflows-java/bin/main/com/insurance/flow/ExampleFlow.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/workflows-java/bin/test/com/insurance/test/NodeDriver.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/workflows-java/bin/test/com/insurance/test/contract/IOUContractTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/workflows-java/bin/test/com/insurance/test/flow/IOUFlowTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/workflows-java/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/workflows-java/src/integrationTest/java/com/insurance/DriverBasedTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/workflows-java/src/main/java/com/insurance/flow/ExampleFlow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/workflows-java/src/test/java/com/insurance/test/NodeDriver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/workflows-java/src/test/java/com/insurance/test/contract/IOUContractTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/workflows-java/src/test/java/com/insurance/test/flow/IOUFlowTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/workflows-kotlin/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/workflows-kotlin/src/integrationTest/kotlin/com/insurance/DriverBasedTests.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/workflows-kotlin/src/main/kotlin/com/insurance/flow/CompanyCollectiblesUpgradationFLow.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/workflows-kotlin/src/main/kotlin/com/insurance/flow/ExampleFlow.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/workflows-kotlin/src/main/kotlin/com/insurance/flow/UserPaymentFLow.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/workflows-kotlin/src/main/kotlin/com/insurance/flow/UserRegistrationFlow.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/workflows-kotlin/src/main/kotlin/uitlities/Utilities.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/workflows-kotlin/src/test/kotlin/com/insurance/test/NodeDriver.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/workflows-kotlin/src/test/kotlin/com/insurance/test/contract/IOUContractTests.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurace-cordapp/workflows-kotlin/src/test/kotlin/com/insurance/test/flow/IOUFlowTests.kt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Z5LptWZj0uRQV7KoMigqVCtf0S" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="ChangesTree.GroupingKeys" value="directory" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/workflows-kotlin/src/main/kotlin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="show.unlinked.gradle.project.popup" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="cordapp-example [deployNodes]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="deployNodes" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="smart-insurance-settlement" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <module name="smart-insurance-settlement" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.cordapp-example [deployNodes]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0c56aa33-fdb3-4522-9693-6fc530ed6730" name="Default Changelist" comment="" />
+      <created>1584124196090</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584124196090</updated>
+    </task>
+    <task id="LOCAL-00001" summary="insurance cordapp - first upload">
+      <created>1584760936624</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1584760936624</updated>
+    </task>
+    <task id="LOCAL-00002" summary="insurance cordapp - first upload">
+      <created>1584761012289</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1584761012289</updated>
+    </task>
+    <task id="LOCAL-00003" summary="insurance cordapp - third upload">
+      <created>1584761238711</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1584761238711</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="insurance cordapp - first upload" />
+    <MESSAGE value="insurance cordapp - third upload" />
+    <option name="LAST_COMMIT_MESSAGE" value="insurance cordapp - third upload" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="565" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1584679422852">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="565" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1044@0.0.1920.1044" timestamp="1584679422852" />
+    <state x="265" y="50" key="CommitChangelistDialog2" timestamp="1584761238426">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="265" y="50" key="CommitChangelistDialog2/0.0.1920.1044@0.0.1920.1044" timestamp="1584761238426" />
+    <state x="309" y="87" key="DiffContextDialog" timestamp="1584761207482">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="309" y="87" key="DiffContextDialog/0.0.1920.1044@0.0.1920.1044" timestamp="1584761207482" />
+    <state x="744" y="280" key="FileChooserDialogImpl" timestamp="1584767090592">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="744" y="280" key="FileChooserDialogImpl/0.0.1920.1044@0.0.1920.1044" timestamp="1584767090592" />
+    <state width="1864" height="251" key="GridCell.Tab.0.bottom" timestamp="1584760683294">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state width="1864" height="251" key="GridCell.Tab.0.bottom/0.0.1920.1044@0.0.1920.1044" timestamp="1584760683294" />
+    <state width="1864" height="251" key="GridCell.Tab.0.center" timestamp="1584760683294">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state width="1864" height="251" key="GridCell.Tab.0.center/0.0.1920.1044@0.0.1920.1044" timestamp="1584760683294" />
+    <state width="1864" height="251" key="GridCell.Tab.0.left" timestamp="1584760683293">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state width="1864" height="251" key="GridCell.Tab.0.left/0.0.1920.1044@0.0.1920.1044" timestamp="1584760683293" />
+    <state width="1864" height="251" key="GridCell.Tab.0.right" timestamp="1584760683294">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state width="1864" height="251" key="GridCell.Tab.0.right/0.0.1920.1044@0.0.1920.1044" timestamp="1584760683294" />
+    <state x="463" y="0" key="SettingsEditor" timestamp="1584760606238">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="463" y="0" key="SettingsEditor/0.0.1920.1044@0.0.1920.1044" timestamp="1584760606238" />
+    <state x="456" y="193" key="Vcs.Push.Dialog.v2" timestamp="1584761031993">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="456" y="193" key="Vcs.Push.Dialog.v2/0.0.1920.1044@0.0.1920.1044" timestamp="1584761031993" />
+    <state x="709" y="292" key="chooseDestDirectoryDialog" timestamp="1584704475807">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="709" y="292" key="chooseDestDirectoryDialog/0.0.1920.1044@0.0.1920.1044" timestamp="1584704475807" />
+    <state x="641" y="348" key="com.intellij.ide.util.TipDialog" timestamp="1584764757114">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="641" y="348" key="com.intellij.ide.util.TipDialog/0.0.1920.1044@0.0.1920.1044" timestamp="1584764757114" />
+    <state x="336" y="122" key="new project wizard" timestamp="1584529432954">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="336" y="122" key="new project wizard/0.0.1920.1044@0.0.1920.1044" timestamp="1584529432954" />
+    <state x="539" y="9" width="840" height="1034" key="search.everywhere.popup" timestamp="1584759885768">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="539" y="9" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1044@0.0.1920.1044" timestamp="1584759885768" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/contract/CollectiblesContract.kt</url>
+          <line>2</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
