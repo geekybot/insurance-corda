@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c56aa33-fdb3-4522-9693-6fc530ed6730" name="Default Changelist" comment="Changed the logic of UserPaymentFLow">
+    <list default="true" id="0c56aa33-fdb3-4522-9693-6fc530ed6730" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/contract/CollectiblesContract.kt" beforeDir="false" afterPath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/contract/CollectiblesContract.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/contract/IOUContract.kt" beforeDir="false" afterPath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/contract/IOUContract.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/contract/UserRegistrationContract.kt" beforeDir="false" afterPath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/contract/UserRegistrationContract.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/contract/UserTransactionContract.kt" beforeDir="false" afterPath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/contract/UserTransactionContract.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/schema/UserTransactionDetailsSchema.kt" beforeDir="false" afterPath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/schema/UserTransactionDetailsSchema.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/state/UserTransactionState.kt" beforeDir="false" afterPath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/state/UserTransactionState.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workflows-kotlin/src/main/kotlin/com/insurance/flow/CompanyCollectiblesUpgradationFLow.kt" beforeDir="false" afterPath="$PROJECT_DIR$/workflows-kotlin/src/main/kotlin/com/insurance/flow/CompanyCollectiblesUpgradationFLow.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/workflows-kotlin/src/main/kotlin/com/insurance/flow/UserPaymentFLow.kt" beforeDir="false" afterPath="$PROJECT_DIR$/workflows-kotlin/src/main/kotlin/com/insurance/flow/UserPaymentFLow.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workflows-kotlin/src/main/kotlin/uitlities/Utilities.kt" beforeDir="false" afterPath="$PROJECT_DIR$/workflows-kotlin/src/main/kotlin/uitlities/Utilities.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584768847019</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Changed the logic of UserPaymentFLow">
+      <created>1584788523034</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1584788523034</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -197,10 +198,10 @@
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
     <state x="565" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1044@0.0.1920.1044" timestamp="1584679422852" />
-    <state x="267" y="50" key="CommitChangelistDialog2" timestamp="1584788500214">
+    <state x="267" y="50" key="CommitChangelistDialog2" timestamp="1584788522887">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state x="267" y="50" key="CommitChangelistDialog2/0.0.1920.1044@0.0.1920.1044" timestamp="1584788500214" />
+    <state x="267" y="50" key="CommitChangelistDialog2/0.0.1920.1044@0.0.1920.1044" timestamp="1584788522887" />
     <state x="744" y="280" key="FileChooserDialogImpl" timestamp="1584696358762">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
@@ -229,10 +230,10 @@
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
     <state x="463" y="0" key="SettingsEditor/0.0.1920.1044@0.0.1920.1044" timestamp="1584764977566" />
-    <state x="456" y="193" key="Vcs.Push.Dialog.v2" timestamp="1584768853011">
+    <state x="456" y="193" key="Vcs.Push.Dialog.v2" timestamp="1584788538397">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state x="456" y="193" key="Vcs.Push.Dialog.v2/0.0.1920.1044@0.0.1920.1044" timestamp="1584768853011" />
+    <state x="456" y="193" key="Vcs.Push.Dialog.v2/0.0.1920.1044@0.0.1920.1044" timestamp="1584788538397" />
     <state x="709" y="292" key="chooseDestDirectoryDialog" timestamp="1584704475807">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>

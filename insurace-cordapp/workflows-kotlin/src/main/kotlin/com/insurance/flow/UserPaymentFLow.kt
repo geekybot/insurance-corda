@@ -63,6 +63,10 @@ object UserPaymentFLow {
                 override fun childProgressTracker() = FinalityFlow.tracker()
             }
 
+            object UPDATING_OWNER_DETAILS : Step("Updating the owner's collectible details") {
+                override fun childProgressTracker() = CollectSignaturesFlow.tracker()
+            }
+
             fun tracker() = ProgressTracker(
                     GENERATING_TRANSACTION,
                     VERIFYING_TRANSACTION,
@@ -159,6 +163,8 @@ object UserPaymentFLow {
                 override fun checkTransaction(stx: SignedTransaction) = requireThat {
                 }
             }
+            val txId = subFlow(signTransactionFlow).id
+
             val collectiblesReceivedFromPartner :CollectiblesState? = otherPartySession.receive<CollectiblesState>().unwrap { it -> it }
             if(collectiblesReceivedFromPartner!=null){
                 val txId = subFlow(CompanyCollectiblesUpgradationFLow(
@@ -170,7 +176,6 @@ object UserPaymentFLow {
                 ))
                 if(txId != null) otherPartySession.send(true)
             }
-            val txId = subFlow(signTransactionFlow).id
 
             return subFlow(ReceiveFinalityFlow(otherPartySession, expectedTxId = txId))
         }
