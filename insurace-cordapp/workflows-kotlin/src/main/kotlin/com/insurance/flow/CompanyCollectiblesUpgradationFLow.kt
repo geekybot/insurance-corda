@@ -32,6 +32,7 @@ import java.util.*
  *
  * All methods called within the [FlowLogic] sub-class need to be annotated with the @Suspendable annotation.
  */
+    @InitiatingFlow
     class CompanyCollectiblesUpgradationFLow(val totalDue: Double,
                     val collectedDue : Double,
                     val pendingDue : Double,
@@ -69,18 +70,23 @@ import java.util.*
             // Generate an unsigned transaction.
 
             val queryCriteria = QueryCriteria.VaultQueryCriteria(Vault.StateStatus.UNCONSUMED)
-            val filteredValue = serviceHub.vaultService.queryBy(CollectiblesState::class.java, queryCriteria).states.single {
-                getMonthFromString(it.state.data.date) == getMonthFromString(dateOfTransaction)
-            }
-            val previousCollectiblesState = filteredValue.state.data
+            val queriedValue = serviceHub.vaultService.queryBy(CollectiblesState::class.java, queryCriteria)
+
+
             var totalDue=0.0
             var pendingDue =0.0
             var collectedDue = 0.0
 
-            if(previousCollectiblesState!=null){
-                totalDue+=previousCollectiblesState.totalDue
-                pendingDue+=previousCollectiblesState.pendingDue
-                collectedDue+=previousCollectiblesState.collectedDue
+            if(queriedValue!=null){
+                val filteredData = queriedValue.states.filter {
+                    getMonthFromString(it.state.data.date) == getMonthFromString(dateOfTransaction)
+                }
+                if(filteredData.isNotEmpty()){
+                    val previousCollectiblesState = filteredData.single().state.data
+                    totalDue+=previousCollectiblesState.totalDue
+                    pendingDue+=previousCollectiblesState.pendingDue
+                    collectedDue+=previousCollectiblesState.collectedDue
+                }
             }
 
             val collectiblesState = CollectiblesState(totalDue,collectedDue,pendingDue,0.0,owner,null,dateOfTransaction)

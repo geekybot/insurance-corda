@@ -19,7 +19,7 @@ import java.lang.IllegalArgumentException
 class CollectiblesContract : Contract {
     companion object {
         @JvmStatic
-        val ID = "com.example.contract.CollectiblesContract"
+        val ID = "com.insurance.contract.CollectiblesContract"
     }
 
     /**

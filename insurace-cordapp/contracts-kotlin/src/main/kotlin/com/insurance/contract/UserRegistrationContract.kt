@@ -19,7 +19,7 @@ import net.corda.core.transactions.LedgerTransaction
 class UserRegistrationContract : Contract {
     companion object {
         @JvmStatic
-        val ID = "com.example.contract.UserRegistrationContract"
+        val ID = "com.insurance.contract.UserRegistrationContract"
     }
 
     /**

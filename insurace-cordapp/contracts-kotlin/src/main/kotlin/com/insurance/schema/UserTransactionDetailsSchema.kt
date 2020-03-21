@@ -22,6 +22,9 @@ object UserTransactionDetailsSchema1 : MappedSchema(
     @Entity
     @Table(name = "UserTransactionDetailsTable")
     class UserTransactionDetailsTable(
+            @Column(name = "userId")
+            var userId: String,
+
             @Column(name = "Date")
             var date: String,
 
@@ -45,6 +48,6 @@ object UserTransactionDetailsSchema1 : MappedSchema(
 
     ) : PersistentState() {
         // Default constructor required by hibernate.
-        constructor(): this("",0.0, 0.0,"", 0.0,"", UUID.randomUUID())
+        constructor(): this("","",0.0, 0.0,"", 0.0,"", UUID.randomUUID())
     }
 }

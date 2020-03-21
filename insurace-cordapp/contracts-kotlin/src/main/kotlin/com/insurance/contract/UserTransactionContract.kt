@@ -18,7 +18,7 @@ import net.corda.core.transactions.LedgerTransaction
 class UserTransactionContract : Contract {
     companion object {
         @JvmStatic
-        val ID = "com.example.contract.UserTransactionContract"
+        val ID = "com.insurance.contract.UserTransactionContract"
     }
 
     /**
@@ -26,7 +26,7 @@ class UserTransactionContract : Contract {
      * considered valid.
      */
     override fun verify(tx: LedgerTransaction) {
-        val command = tx.commands.requireSingleCommand<Commands.CreateUser>()
+        val command = tx.commands.requireSingleCommand<Commands.CreateTransaction>()
         requireThat {
             // Generic constraints around the create user transaction.
             "No inputs should be consumed when creating a user." using (tx.inputs.isEmpty())
@@ -44,6 +44,6 @@ class UserTransactionContract : Contract {
      * This contract only implements one command, CreateUser.
      */
     interface Commands : CommandData {
-        class CreateUser : Commands
+        class CreateTransaction : Commands
     }
 }

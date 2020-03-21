@@ -24,7 +24,8 @@ import net.corda.core.schemas.QueryableState
  * @param partner partner party who owns and stores the state
  */
 @BelongsToContract(UserTransactionContract::class)
-data class UserTransactionState(val date: String,
+data class UserTransactionState(val userId: String,
+                                val date: String,
                                 val totalAmountTobePaid :Double ,
                                 val amountPaidInNativeCurrency: Double,
                                 val nativeCurrencyName : String,
@@ -40,6 +41,7 @@ data class UserTransactionState(val date: String,
     override fun generateMappedObject(schema: MappedSchema): PersistentState {
         return when (schema) {
             is UserTransactionDetailsSchema1 -> UserTransactionDetailsSchema1.UserTransactionDetailsTable(
+                    this.userId,
                     this.date,
                     this.totalAmountTobePaid,
                     this.amountPaidInNativeCurrency,

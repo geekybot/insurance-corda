@@ -38,7 +38,8 @@ import uitlities.getInForeignCurrency
 object UserPaymentFLow {
     @InitiatingFlow
     @StartableByRPC
-    class Initiator(val date: String,
+    class Initiator(val userId : String,
+                    val date: String,
                     val totalAmountToBePaid : Double,
                     val amountPaidInNativeCurrency: Double,
                     val nativeCurrencyName : String,
@@ -81,21 +82,25 @@ object UserPaymentFLow {
             // Stage 1.
             progressTracker.currentStep = GENERATING_TRANSACTION
             // Generate an unsigned transaction.
-            val userTransactionState = UserTransactionState(date,totalAmountToBePaid,amountPaidInNativeCurrency,nativeCurrencyName,amountPaidInForeignCurrency,foreignCurrencyName,owner,partner)
+            val userTransactionState = UserTransactionState(userId,date,totalAmountToBePaid,amountPaidInNativeCurrency,nativeCurrencyName,amountPaidInForeignCurrency,foreignCurrencyName,owner,partner)
 
             val queryCriteria2 = QueryCriteria.VaultQueryCriteria(Vault.StateStatus.UNCONSUMED,contractStateTypes = setOf(CollectiblesState::class.java)).withParticipants(listOf(partner))
-            val filteredValue2 = (serviceHub.vaultService.queryBy(CollectiblesState::class.java,queryCriteria2)).states.filter { date == this.date }
-            val collectiblesStateOfPartner = filteredValue2.single().state.data
-
+            val queriedData = (serviceHub.vaultService.queryBy(CollectiblesState::class.java,queryCriteria2))
+            println("Queried data is ${queriedData.toString()}")
             var totalDue= getInForeignCurrency(totalAmountToBePaid,foreignCurrencyName)
             var collectedDue= amountPaidInForeignCurrency
             var pendingDue= getInForeignCurrency(amountPaidInNativeCurrency,foreignCurrencyName)
 
 
-            if(collectiblesStateOfPartner!=null){
-                totalDue+= collectiblesStateOfPartner.totalDue
-                collectedDue+= collectiblesStateOfPartner.collectedDue
-                pendingDue+= collectiblesStateOfPartner.pendingDue
+            if(queriedData!=null){
+                println("Queried date is not null ************** I repeat queried data is not null")
+                val filteredValue = queriedData.states.filter { date == this.date }
+                if (filteredValue.isNotEmpty()) {
+                    val collectiblesStateOfPartner = filteredValue.single().state.data
+                    totalDue+= collectiblesStateOfPartner.totalDue
+                    collectedDue+= collectiblesStateOfPartner.collectedDue
+                    pendingDue+= collectiblesStateOfPartner.pendingDue
+                }
             }
 
             val newCollectiblesStateOfPartner = CollectiblesState(totalDue,
@@ -107,7 +112,7 @@ object UserPaymentFLow {
                     date = date
             )
 
-            val txCommand = Command(UserRegistrationContract.Commands.CreateUser(), listOf(owner.owningKey,partner.owningKey))
+            val txCommand = Command(UserTransactionContract.Commands.CreateTransaction(), listOf(owner.owningKey,partner.owningKey))
             val txCommand1 = Command(CollectiblesContract.Commands.UpdateCollectibles(), listOf(owner.owningKey,partner.owningKey))
             val txBuilder = TransactionBuilder(notary)
                     .addOutputState(userTransactionState, UserTransactionContract.ID)

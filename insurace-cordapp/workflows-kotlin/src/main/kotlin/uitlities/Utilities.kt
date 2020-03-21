@@ -1,16 +1,15 @@
 package uitlities
 
+import java.security.SecureRandom
 import java.text.SimpleDateFormat
 import java.util.*
 
+const val AB = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+var rnd: SecureRandom = SecureRandom()
+
  fun getSaltString(): String? {
-    val SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
-    val salt = StringBuilder()
-    val rnd = Random()
-    while (salt.length < 3) {
-        val index = (rnd.nextFloat() * SALTCHARS.length) as Int
-        salt.append(SALTCHARS[index])
-    }
+     val salt = StringBuilder(3)
+     for (i in 0 until 3) salt.append(AB[rnd.nextInt(AB.length)])
     return salt.toString()
 }
 
