@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0c56aa33-fdb3-4522-9693-6fc530ed6730" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workflows-kotlin/src/main/kotlin/com/insurance/flow/UserPaymentFLow.kt" beforeDir="false" afterPath="$PROJECT_DIR$/workflows-kotlin/src/main/kotlin/com/insurance/flow/UserPaymentFLow.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workflows-kotlin/src/main/kotlin/com/insurance/flow/UserRegistrationFlow.kt" beforeDir="false" afterPath="$PROJECT_DIR$/workflows-kotlin/src/main/kotlin/com/insurance/flow/UserRegistrationFlow.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +17,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand />
@@ -152,22 +153,37 @@
       <option name="project" value="LOCAL" />
       <updated>1584767410216</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="flows update">
+      <created>1584768637943</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1584768637943</updated>
+    </task>
+    <task id="LOCAL-00003" summary="flows update">
+      <created>1584768831861</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1584768831861</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first upload" />
-    <option name="LAST_COMMIT_MESSAGE" value="first upload" />
+    <MESSAGE value="flows update" />
+    <option name="LAST_COMMIT_MESSAGE" value="flows update" />
   </component>
   <component name="WindowStateProjectService">
     <state x="565" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1584679422852">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
     <state x="565" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1044@0.0.1920.1044" timestamp="1584679422852" />
-    <state x="267" y="50" key="CommitChangelistDialog2" timestamp="1584767410083">
+    <state x="267" y="50" key="CommitChangelistDialog2" timestamp="1584768831762">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state x="267" y="50" key="CommitChangelistDialog2/0.0.1920.1044@0.0.1920.1044" timestamp="1584767410083" />
+    <state x="267" y="50" key="CommitChangelistDialog2/0.0.1920.1044@0.0.1920.1044" timestamp="1584768831762" />
     <state x="744" y="280" key="FileChooserDialogImpl" timestamp="1584696358762">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
@@ -188,6 +204,10 @@
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
     <state width="1864" height="251" key="GridCell.Tab.0.right/0.0.1920.1044@0.0.1920.1044" timestamp="1584760683294" />
+    <state x="599" y="168" key="MultipleFileMergeDialog" timestamp="1584768841150">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="599" y="168" key="MultipleFileMergeDialog/0.0.1920.1044@0.0.1920.1044" timestamp="1584768841150" />
     <state x="463" y="0" key="SettingsEditor" timestamp="1584764977566">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
@@ -204,10 +224,10 @@
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
     <state x="641" y="348" key="com.intellij.ide.util.TipDialog/0.0.1920.1044@0.0.1920.1044" timestamp="1584678771358" />
-    <state x="696" y="425" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584768735870">
+    <state x="696" y="425" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584768834784">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state x="696" y="425" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1044@0.0.1920.1044" timestamp="1584768735870" />
+    <state x="696" y="425" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1044@0.0.1920.1044" timestamp="1584768834784" />
     <state x="336" y="122" key="new project wizard" timestamp="1584529432954">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
