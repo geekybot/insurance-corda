@@ -2,10 +2,81 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c56aa33-fdb3-4522-9693-6fc530ed6730" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/contract/CollectiblesContract.kt" beforeDir="false" afterPath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/contract/CollectiblesContract.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/contract/UserTransactionContract.kt" beforeDir="false" afterPath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/contract/UserTransactionContract.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workflows-kotlin/src/main/kotlin/com/insurance/flow/UserPaymentFLow.kt" beforeDir="false" afterPath="$PROJECT_DIR$/workflows-kotlin/src/main/kotlin/com/insurance/flow/UserPaymentFLow.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Debug_CorDapp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Run_Contract_Tests___Java.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Run_Contract_Tests___Kotlin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Run_Example_Cordapp___Java.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Run_Example_Cordapp___Kotlin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Run_Flow_Tests___Java.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Run_Flow_Tests___Kotlin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Run_Integration_Tests___Java.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Run_Integration_Tests___Kotlin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Unit_tests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/tasks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENCE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TRADEMARK" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/insurance/server/JavaClientRpc.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/src/main/kotlin/com/insurance/server/MainController.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/src/main/kotlin/com/insurance/server/NodeRPCConnection.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/src/main/kotlin/com/insurance/server/Server.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/src/main/resources/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/src/main/resources/public/js/angular-module.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/dev/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts-java/bin/main/com/insurance/contract/IOUContract$Commands$Create.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts-java/bin/main/com/insurance/contract/IOUContract$Commands.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts-java/bin/main/com/insurance/contract/IOUContract.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts-java/bin/main/com/insurance/schema/IOUSchema.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts-java/bin/main/com/insurance/schema/IOUSchemaV1$PersistentIOU.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts-java/bin/main/com/insurance/schema/IOUSchemaV1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts-java/bin/main/com/insurance/state/IOUState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts-java/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts-java/src/main/java/com/insurance/contract/IOUContract.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts-java/src/main/java/com/insurance/schema/IOUSchema.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts-java/src/main/java/com/insurance/schema/IOUSchemaV1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts-java/src/main/java/com/insurance/state/IOUState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts-kotlin/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/contract/CollectiblesContract.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/contract/IOUContract.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/contract/UserRegistrationContract.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/contract/UserTransactionContract.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/schema/Collectibles.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/schema/IOUSchema.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/schema/UserDetails.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/schema/UserTransactionDetailsSchema.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/state/CollectiblesState.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/state/IOUState.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/state/UserState.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/state/UserTransactionState.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/quasar.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repositories.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workflows-kotlin/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workflows-kotlin/src/integrationTest/kotlin/com/insurance/DriverBasedTests.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workflows-kotlin/src/main/kotlin/com/insurance/flow/CompanyCollectiblesUpgradationFLow.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workflows-kotlin/src/main/kotlin/com/insurance/flow/ExampleFlow.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workflows-kotlin/src/main/kotlin/com/insurance/flow/UserPaymentFLow.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workflows-kotlin/src/main/kotlin/com/insurance/flow/UserRegistrationFlow.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workflows-kotlin/src/main/kotlin/uitlities/Utilities.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workflows-kotlin/src/test/kotlin/com/insurance/test/NodeDriver.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workflows-kotlin/src/test/kotlin/com/insurance/test/contract/IOUContractTests.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workflows-kotlin/src/test/kotlin/com/insurance/test/flow/IOUFlowTests.kt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +124,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/workflows-kotlin/src/main/kotlin" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../insurance-cordapp" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -184,28 +255,36 @@
       <option name="project" value="LOCAL" />
       <updated>1584788523034</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fixes">
+      <created>1584790197808</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1584790197808</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first upload" />
     <MESSAGE value="flows update" />
     <MESSAGE value="Changed the logic of UserPaymentFLow" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed the logic of UserPaymentFLow" />
+    <MESSAGE value="fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="565" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1584679422852">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
     <state x="565" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1044@0.0.1920.1044" timestamp="1584679422852" />
-    <state x="267" y="50" key="CommitChangelistDialog2" timestamp="1584788522887">
+    <state x="267" y="50" key="CommitChangelistDialog2" timestamp="1584790197721">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state x="267" y="50" key="CommitChangelistDialog2/0.0.1920.1044@0.0.1920.1044" timestamp="1584788522887" />
-    <state x="744" y="280" key="FileChooserDialogImpl" timestamp="1584696358762">
+    <state x="267" y="50" key="CommitChangelistDialog2/0.0.1920.1044@0.0.1920.1044" timestamp="1584790197721" />
+    <state x="744" y="280" key="FileChooserDialogImpl" timestamp="1584810039958">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state x="744" y="280" key="FileChooserDialogImpl/0.0.1920.1044@0.0.1920.1044" timestamp="1584696358762" />
+    <state x="744" y="280" key="FileChooserDialogImpl/0.0.1920.1044@0.0.1920.1044" timestamp="1584810039958" />
     <state width="1864" height="251" key="GridCell.Tab.0.bottom" timestamp="1584760683294">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
@@ -230,10 +309,10 @@
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
     <state x="463" y="0" key="SettingsEditor/0.0.1920.1044@0.0.1920.1044" timestamp="1584764977566" />
-    <state x="456" y="193" key="Vcs.Push.Dialog.v2" timestamp="1584788538397">
+    <state x="456" y="193" key="Vcs.Push.Dialog.v2" timestamp="1584790204711">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state x="456" y="193" key="Vcs.Push.Dialog.v2/0.0.1920.1044@0.0.1920.1044" timestamp="1584788538397" />
+    <state x="456" y="193" key="Vcs.Push.Dialog.v2/0.0.1920.1044@0.0.1920.1044" timestamp="1584790204711" />
     <state x="709" y="292" key="chooseDestDirectoryDialog" timestamp="1584704475807">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
