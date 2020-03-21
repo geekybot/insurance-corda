@@ -83,31 +83,24 @@ object UserPaymentFLow {
             // Generate an unsigned transaction.
             val userTransactionState = UserTransactionState(date,totalAmountToBePaid,amountPaidInNativeCurrency,nativeCurrencyName,amountPaidInForeignCurrency,foreignCurrencyName,owner,partner)
 
-            val queryCriteria = QueryCriteria.VaultQueryCriteria(Vault.StateStatus.UNCONSUMED,contractStateTypes = setOf(CollectiblesState::class.java)).withParticipants(listOf(owner,partner))
-            val filteredValue = (serviceHub.vaultService.queryBy(CollectiblesState::class.java,queryCriteria)).states.filter { date == this.date }
-            val collectiblesState = filteredValue.single().state.data
-
             val queryCriteria2 = QueryCriteria.VaultQueryCriteria(Vault.StateStatus.UNCONSUMED,contractStateTypes = setOf(CollectiblesState::class.java)).withParticipants(listOf(partner))
             val filteredValue2 = (serviceHub.vaultService.queryBy(CollectiblesState::class.java,queryCriteria2)).states.filter { date == this.date }
             val collectiblesStateOfPartner = filteredValue2.single().state.data
 
-            var previousTotalDue = 0.0
-            var previousCollectedDue = 0.0
-            var previousPendingDue = 0.0
             var totalDue= getInForeignCurrency(totalAmountToBePaid,foreignCurrencyName)
             var collectedDue= amountPaidInForeignCurrency
             var pendingDue= getInForeignCurrency(amountPaidInNativeCurrency,foreignCurrencyName)
 
 
             if(collectiblesStateOfPartner!=null){
-                previousTotalDue = collectiblesStateOfPartner.totalDue
-                previousCollectedDue = collectiblesStateOfPartner.collectedDue
-                previousPendingDue = collectiblesStateOfPartner.pendingDue
+                totalDue+= collectiblesStateOfPartner.totalDue
+                collectedDue+= collectiblesStateOfPartner.collectedDue
+                pendingDue+= collectiblesStateOfPartner.pendingDue
             }
 
-            val newCollectiblesStateOfPartner = CollectiblesState(previousTotalDue+totalDue,
-                    collectedDue = previousCollectedDue+collectedDue,
-                    pendingDue = previousPendingDue+pendingDue,
+            val newCollectiblesStateOfPartner = CollectiblesState(totalDue,
+                    collectedDue = collectedDue,
+                    pendingDue = pendingDue,
                     remittances = 0.0,
                     owner = owner,
                     partner = partner,

@@ -14,6 +14,7 @@ import net.corda.core.transactions.SignedTransaction
 import net.corda.core.transactions.TransactionBuilder
 import net.corda.core.utilities.ProgressTracker
 import net.corda.core.utilities.ProgressTracker.Step
+import uitlities.getSaltString
 import java.util.*
 
 /**
@@ -98,16 +99,7 @@ object UserRegistrationFLow {
             return subFlow(FinalityFlow(fullySignedTx, setOf(otherPartySession), FINALISING_TRANSACTION.childProgressTracker()))
         }
 
-        private fun getSaltString(): String? {
-            val SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
-            val salt = StringBuilder()
-            val rnd = Random()
-            while (salt.length < 3) {
-                val index = (rnd.nextFloat() * SALTCHARS.length) as Int
-                salt.append(SALTCHARS[index])
-            }
-            return salt.toString()
-        }
+
 
     }
 

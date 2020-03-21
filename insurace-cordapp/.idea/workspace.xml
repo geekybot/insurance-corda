@@ -1,83 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c56aa33-fdb3-4522-9693-6fc530ed6730" name="Default Changelist" comment="first upload">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Debug_CorDapp.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Run_Contract_Tests___Java.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Run_Contract_Tests___Kotlin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Run_Example_Cordapp___Java.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Run_Example_Cordapp___Kotlin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Run_Flow_Tests___Java.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Run_Flow_Tests___Kotlin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Run_Integration_Tests___Java.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Run_Integration_Tests___Kotlin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Unit_tests.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vscode/tasks.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LICENCE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TRADEMARK" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clients/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clients/src/main/java/com/insurance/server/JavaClientRpc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clients/src/main/kotlin/com/insurance/server/MainController.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clients/src/main/kotlin/com/insurance/server/NodeRPCConnection.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clients/src/main/kotlin/com/insurance/server/Server.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clients/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clients/src/main/resources/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clients/src/main/resources/public/js/angular-module.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/dev/log4j2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contracts-java/bin/main/com/insurance/contract/IOUContract$Commands$Create.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contracts-java/bin/main/com/insurance/contract/IOUContract$Commands.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contracts-java/bin/main/com/insurance/contract/IOUContract.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contracts-java/bin/main/com/insurance/schema/IOUSchema.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contracts-java/bin/main/com/insurance/schema/IOUSchemaV1$PersistentIOU.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contracts-java/bin/main/com/insurance/schema/IOUSchemaV1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contracts-java/bin/main/com/insurance/state/IOUState.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contracts-java/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contracts-java/src/main/java/com/insurance/contract/IOUContract.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contracts-java/src/main/java/com/insurance/schema/IOUSchema.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contracts-java/src/main/java/com/insurance/schema/IOUSchemaV1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contracts-java/src/main/java/com/insurance/state/IOUState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contracts-kotlin/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/contract/CollectiblesContract.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/contract/IOUContract.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/contract/UserRegistrationContract.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/contract/UserTransactionContract.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/schema/Collectibles.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/schema/IOUSchema.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/schema/UserDetails.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/schema/UserTransactionDetailsSchema.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/state/CollectiblesState.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/state/IOUState.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/state/UserState.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contracts-kotlin/src/main/kotlin/com/insurance/state/UserTransactionState.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/README.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/quasar.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repositories.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/workflows-kotlin/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/workflows-kotlin/src/integrationTest/kotlin/com/insurance/DriverBasedTests.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/workflows-kotlin/src/main/kotlin/com/insurance/flow/CompanyCollectiblesUpgradationFLow.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/workflows-kotlin/src/main/kotlin/com/insurance/flow/ExampleFlow.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/workflows-kotlin/src/main/kotlin/com/insurance/flow/UserPaymentFLow.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/workflows-kotlin/src/main/kotlin/com/insurance/flow/UserRegistrationFlow.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/workflows-kotlin/src/main/kotlin/uitlities/Utilities.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/workflows-kotlin/src/test/kotlin/com/insurance/test/NodeDriver.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/workflows-kotlin/src/test/kotlin/com/insurance/test/contract/IOUContractTests.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/workflows-kotlin/src/test/kotlin/com/insurance/test/flow/IOUFlowTests.kt" afterDir="false" />
+    <list default="true" id="0c56aa33-fdb3-4522-9693-6fc530ed6730" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workflows-kotlin/src/main/kotlin/com/insurance/flow/UserPaymentFLow.kt" beforeDir="false" afterPath="$PROJECT_DIR$/workflows-kotlin/src/main/kotlin/com/insurance/flow/UserPaymentFLow.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workflows-kotlin/src/main/kotlin/com/insurance/flow/UserRegistrationFlow.kt" beforeDir="false" afterPath="$PROJECT_DIR$/workflows-kotlin/src/main/kotlin/com/insurance/flow/UserRegistrationFlow.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,6 +144,14 @@
       <option name="presentableId" value="Default" />
       <updated>1584124196090</updated>
     </task>
+    <task id="LOCAL-00001" summary="first upload">
+      <created>1584767410216</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1584767410216</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -228,10 +163,10 @@
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
     <state x="565" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1044@0.0.1920.1044" timestamp="1584679422852" />
-    <state x="267" y="50" key="CommitChangelistDialog2" timestamp="1584767376661">
+    <state x="267" y="50" key="CommitChangelistDialog2" timestamp="1584767410083">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state x="267" y="50" key="CommitChangelistDialog2/0.0.1920.1044@0.0.1920.1044" timestamp="1584767376661" />
+    <state x="267" y="50" key="CommitChangelistDialog2/0.0.1920.1044@0.0.1920.1044" timestamp="1584767410083" />
     <state x="744" y="280" key="FileChooserDialogImpl" timestamp="1584696358762">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
@@ -256,6 +191,10 @@
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
     <state x="463" y="0" key="SettingsEditor/0.0.1920.1044@0.0.1920.1044" timestamp="1584764977566" />
+    <state x="456" y="193" key="Vcs.Push.Dialog.v2" timestamp="1584767416661">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="456" y="193" key="Vcs.Push.Dialog.v2/0.0.1920.1044@0.0.1920.1044" timestamp="1584767416661" />
     <state x="709" y="292" key="chooseDestDirectoryDialog" timestamp="1584704475807">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
