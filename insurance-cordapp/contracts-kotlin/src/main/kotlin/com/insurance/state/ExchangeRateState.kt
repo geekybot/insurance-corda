@@ -25,50 +25,35 @@ import net.corda.core.schemas.QueryableState
  * @param partner party who needs to own and store the state
  * @param date date(month) for which this collectibles state corresponds to.
  */
+//ToDo to remove ExchangeRateState
 @BelongsToContract(CollectiblesContract::class)
-data class CollectiblesState(   val totalDue: Double,
-                                val collectedDue : Double,
-                                val pendingDue : Double,
-                                val remittances : Double,
-                                val owner: Party,
-                                val partner : Party?,
-                                val date : String,
-                                val count : Int =0,
+data class ExchangeRateState(   val timeStamp : String,
+                                val exchangeRate : Double,
+                                val foreignCurrencySymbol : String,
+                                val nativeCurrencySymbol : String,
+                                val totalAmount : Double,
+                                val amountPaidInNativeCurrency : Double, //converted to the foreignCurrency based on exchange rate
+                                val owner : Party,
+                                val partner : Party,
+                                val oracle : Party,
                                 override val linearId: UniqueIdentifier = UniqueIdentifier()):
         LinearState, QueryableState {
     /** The public keys of the involved parties. */
-    override val participants: List<AbstractParty> get() {
-        return if (partner!=null) listOf(owner,partner) else listOf(owner)
-    }
+    override val participants: List<AbstractParty> get() =listOf(owner,partner,oracle)
 
-    //ToDo to remove the CompanyCOllectiblesTable as the details can be put into some offchain db for efficiency purpose
     override fun generateMappedObject(schema: MappedSchema): PersistentState {
-         when (schema) {
+        when (schema) {
             is Collectibles1 -> {
-                //check if owner and partner details are available to select the required table. if both owner and partner is not null it means it's
-                // a collectible details between both partner and company
-                if(owner!= null && partner !=null) {
-                   return Collectibles1.PartnerCollectiblesTable(
+                    return Collectibles1.ExchangeRateTable(
+                            this.timeStamp,
+                            this.exchangeRate,
+                            this.foreignCurrencySymbol,
+                            this.nativeCurrencySymbol,
                             this.owner.name.toString(),
                             this.partner.name.toString(),
-                            this.date,
-                            this.totalDue,
-                            this.collectedDue,
-                            this.pendingDue,
-                            this.remittances,
-                            this.count,
+                            this.oracle.name.toString(),
                             this.linearId.id
                     )
-                }else{
-                    return Collectibles1.CompanyCollectiblesTable(
-                            this.owner.name.toString(),
-                            this.date,
-                            this.totalDue,
-                            this.collectedDue,
-                            this.pendingDue,
-                            this.linearId.id
-                    )
-                }
             }
             else -> throw IllegalArgumentException("Unrecognised schema $schema")
         }

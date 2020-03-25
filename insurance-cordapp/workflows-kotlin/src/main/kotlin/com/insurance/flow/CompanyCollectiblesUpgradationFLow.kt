@@ -2,12 +2,10 @@ package com.insurance.flow
 
 import co.paralleluniverse.fibers.Suspendable
 import com.insurance.contract.CollectiblesContract
-import com.insurance.contract.UserRegistrationContract
 import com.insurance.flow.UserRegistrationFLow.Acceptor
 import com.insurance.flow.UserRegistrationFLow.Initiator
 import com.insurance.state.CollectiblesState
 import com.insurance.state.IOUState
-import com.insurance.state.UserState
 import net.corda.core.contracts.Command
 import net.corda.core.contracts.requireThat
 import net.corda.core.flows.*
@@ -18,8 +16,7 @@ import net.corda.core.transactions.SignedTransaction
 import net.corda.core.transactions.TransactionBuilder
 import net.corda.core.utilities.ProgressTracker
 import net.corda.core.utilities.ProgressTracker.Step
-import uitlities.getMonthFromString
-import java.util.*
+import uitlities.parseGivenDateString
 
 /**
  * This flow allows two parties (the [Initiator] and the [Acceptor]) to come to an agreement about the IOU encapsulated
@@ -62,6 +59,7 @@ import java.util.*
 
         @Suspendable
         override fun call(): SignedTransaction {
+            println("Boots on the ground : CompanyCollectiblesUpgradationFLow")
             // Obtain a reference to the notary we want to use.
             val notary = serviceHub.networkMapCache.notaryIdentities[0]
 
@@ -73,22 +71,22 @@ import java.util.*
             val queriedValue = serviceHub.vaultService.queryBy(CollectiblesState::class.java, queryCriteria)
 
 
-            var totalDue=0.0
-            var pendingDue =0.0
-            var collectedDue = 0.0
+            var totalDue1=totalDue
+            var pendingDue2 =pendingDue
+            var collectedDue3 = collectedDue
 
             if(queriedValue!=null){
                 val filteredData = queriedValue.states.filter {
-                    getMonthFromString(it.state.data.date) == getMonthFromString(dateOfTransaction)
+                    parseGivenDateString(it.state.data.date) == parseGivenDateString(dateOfTransaction)
                 }
                 if(filteredData.isNotEmpty()){
                     val previousCollectiblesState = filteredData.single().state.data
-                    totalDue+=previousCollectiblesState.totalDue
-                    pendingDue+=previousCollectiblesState.pendingDue
-                    collectedDue+=previousCollectiblesState.collectedDue
+                    totalDue1+=previousCollectiblesState.totalDue
+                    pendingDue2+=previousCollectiblesState.pendingDue
+                    collectedDue3+=previousCollectiblesState.collectedDue
                 }
             }
-
+            println("artifacts collected,Engaging now")
             val collectiblesState = CollectiblesState(totalDue,collectedDue,pendingDue,0.0,owner,null,dateOfTransaction)
             val txCommand = Command(CollectiblesContract.Commands.UpdateCollectibles(), listOf(owner.owningKey))
             val txBuilder = TransactionBuilder(notary)
@@ -109,6 +107,7 @@ import java.util.*
             // Stage 4.
             progressTracker.currentStep = FINALISING_TRANSACTION
             // Notarise and record the transaction in both parties' vaults.
+            println("returing back to base")
             return subFlow(FinalityFlow(partSignedTx, emptyList(), FINALISING_TRANSACTION.childProgressTracker()))
         }
 

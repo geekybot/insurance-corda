@@ -13,18 +13,18 @@ var rnd: SecureRandom = SecureRandom()
     return salt.toString()
 }
 
- fun getMonthFromString(date: String): String? {
+ fun parseGivenDateString(date: String): Array<String>? {
     val d = SimpleDateFormat("dd/mm/yyyy", Locale.ENGLISH).parse(date)
     val cal = Calendar.getInstance()
     cal.time = d
-    return (SimpleDateFormat("MM").format(cal.time))
+     return (arrayOf(SimpleDateFormat("dd").format(cal.time),SimpleDateFormat("MM").format(cal.time),SimpleDateFormat("YYYY").format(cal.time)))
 }
 
- fun getCurrentMonth():String{
+ fun parseCurrentDateString():Array<String>{
     val cal2 = Calendar.getInstance()
-    return (SimpleDateFormat("MM").format(cal2.time))
+    return (arrayOf(SimpleDateFormat("dd").format(cal2.time),SimpleDateFormat("MM").format(cal2.time),SimpleDateFormat("YYYY").format(cal2.time)))
 }
 
- fun getInForeignCurrency(totalAmountToBePaid: Double,foreignCurrencyName: String): Double{
-    return 0.0
-}
+// fun getInForeignCurrency(totalAmountToBePaid: Double,foreignCurrencyName: String): Double{
+//    return 0.0
+//}

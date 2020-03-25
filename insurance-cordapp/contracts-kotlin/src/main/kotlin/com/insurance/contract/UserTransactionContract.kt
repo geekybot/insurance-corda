@@ -29,8 +29,8 @@ class UserTransactionContract : Contract {
         val command = tx.commands.requireSingleCommand<Commands.CreateTransaction>()
         requireThat {
             // Generic constraints around the create user transaction.
-            "No inputs should be consumed when creating a user." using (tx.inputs.isEmpty())
-            "Only one output state should be created." using (tx.outputsOfType<UserTransactionState>().size == 1)
+//            "No inputs should be consumed when creating a user." using (tx.inputs.isEmpty())
+//            "Only one output state should be created." using (tx.outputsOfType<UserTransactionState>().size == 1)
             val out = tx.outputsOfType<UserTransactionState>().single()
             "The owner and the partner cannot be the same entity." using (out.owner != out.partner)
             "All of the participants must be signers." using (command.signers.containsAll(out.participants.map { it.owningKey }))

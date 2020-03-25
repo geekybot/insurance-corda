@@ -3,6 +3,7 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
       <module name="cordapp-example.workflows-java.integrationTest" target="11" />
+      <module name="insurance-cordapp.workflows-kotlin.integrationTest" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

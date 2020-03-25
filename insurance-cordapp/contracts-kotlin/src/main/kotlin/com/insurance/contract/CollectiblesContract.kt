@@ -32,8 +32,8 @@ class CollectiblesContract : Contract {
            is Commands.CreateCollectibles -> {
                 requireThat {
                    // Generic constraints around the create user transaction.
-                   "No inputs should be consumed when creating a user." using (tx.inputs.isEmpty())
-                   "Only one output state should be created." using (tx.outputsOfType<CollectiblesState>().size == 1)
+//                   "No inputs should be consumed when creating a user." using (tx.inputs.isEmpty())
+//                   "Only one output state should be created." using (tx.outputsOfType<CollectiblesState>().size == 1)
                    val out = tx.outputsOfType<CollectiblesState>().single()
                    "The owner and the partner cannot be the same entity." using (out.owner != out.partner)
                    "All of the participants must be signers." using (command.signers.containsAll(out.participants.map { it.owningKey }))
@@ -47,8 +47,8 @@ class CollectiblesContract : Contract {
            is Commands.UpdateCollectibles -> {
                requireThat {
                    // Generic constraints around the create user transaction.
-                   "No inputs should be consumed when creating a user." using (tx.inputs.isEmpty())
-                   "Only one output state should be created." using (tx.outputsOfType<CollectiblesState>().size == 1)
+//                   "No inputs should be consumed when creating a user." using (tx.inputs.isEmpty())
+//                   "Only one output state should be created." using (tx.outputsOfType<CollectiblesState>().size == 1)
                    val out = tx.outputsOfType<CollectiblesState>().single()
                    "The owner and the partner cannot be the same entity." using (out.owner != out.partner)
                    "All of the participants must be signers." using (command.signers.containsAll(out.participants.map { it.owningKey }))
