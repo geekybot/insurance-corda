@@ -1,0 +1,454 @@
+{
+	"info": {
+		"_postman_id": "bd30df60-6d1f-43ba-878c-99509408094b",
+		"name": "insurance-cordapp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:50006/api/example/register-user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userName",
+							"value": "Bala",
+							"type": "text"
+						},
+						{
+							"key": "userAddress",
+							"value": "Thanjavur",
+							"type": "text"
+						},
+						{
+							"key": "ownerParty",
+							"value": "O=Alliance,L=London,C=GB",
+							"type": "text"
+						},
+						{
+							"key": "partnerParty",
+							"value": "O=BajajAlliance,L=New York,C=US",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:50006/api/example/register-user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50006",
+					"path": [
+						"api",
+						"example",
+						"register-user"
+					]
+				},
+				"description": "Registration of user"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:50005/api/example/make-user-payment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userName",
+							"value": "Professor",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "totalAmountToBePaid",
+							"value": "1500",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "amountPaidInNativeCurrency",
+							"value": "500",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "nativeCurrencyName",
+							"value": "INR",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "amountPaidInForeignCurrency",
+							"value": "13.09",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "foreignCurrencyName",
+							"value": "USD",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "owner",
+							"value": "O=Alliance,L=London,C=GB",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "partnerName",
+							"value": "O=BajajAlliance,L=New York,C=US",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "2024",
+							"type": "text"
+						},
+						{
+							"key": "month",
+							"value": "03",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:50006/api/example/fetch-users-transaction-details-of-a-partner-for-a-month",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50006",
+					"path": [
+						"api",
+						"example",
+						"fetch-users-transaction-details-of-a-partner-for-a-month"
+					]
+				},
+				"description": "make user payment\n"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:50006/api/example/fetch-user-details-of-partner",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userName",
+							"value": "Bala",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "userAddress",
+							"value": "Thanjavur",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "ownerParty",
+							"value": "O=Alliance,L=London,C=GB",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "partnerName",
+							"value": "O=BajajAlliance,L=New York,C=US",
+							"type": "text"
+						},
+						{
+							"key": "month",
+							"value": "03",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "year",
+							"value": "2020",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:50006/api/example/fetch-user-details-of-partner",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50006",
+					"path": [
+						"api",
+						"example",
+						"fetch-user-details-of-partner"
+					]
+				},
+				"description": "fetch user details belonging to a partner"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:50005/api/example/fetch-users-transaction-details-of-a-partner-for-a-month",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userName",
+							"value": "Professor",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "totalAmountToBePaid",
+							"value": "1500",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "amountPaidInNativeCurrency",
+							"value": "500",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "nativeCurrencyName",
+							"value": "INR",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "amountPaidInForeignCurrency",
+							"value": "13.09",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "foreignCurrencyName",
+							"value": "USD",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "owner",
+							"value": "O=Alliance,L=London,C=GB",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "partnerName",
+							"value": "O=BajajAlliance,L=New York,C=US",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "2024",
+							"type": "text"
+						},
+						{
+							"key": "month",
+							"value": "03",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:50006/api/example/fetch-collectibles-details-of-a-partner-for-a-month",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50006",
+					"path": [
+						"api",
+						"example",
+						"fetch-collectibles-details-of-a-partner-for-a-month"
+					]
+				},
+				"description": "get user tx details beloging to a partner (for a month)"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:50005/api/example/fetch-collectibles-details-of-a-partner-for-a-month",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userName",
+							"value": "Professor",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "totalAmountToBePaid",
+							"value": "1500",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "amountPaidInNativeCurrency",
+							"value": "500",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "nativeCurrencyName",
+							"value": "INR",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "amountPaidInForeignCurrency",
+							"value": "13.09",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "foreignCurrencyName",
+							"value": "USD",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "owner",
+							"value": "O=Alliance,L=London,C=GB",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "partnerName",
+							"value": "O=BajajAlliance,L=New York,C=US",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "2024",
+							"type": "text"
+						},
+						{
+							"key": "month",
+							"value": "03",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:50006/api/example/fetch-collectibles-details-of-a-partner-for-a-month",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50006",
+					"path": [
+						"api",
+						"example",
+						"fetch-collectibles-details-of-a-partner-for-a-month"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:50005/api/example/fetch-collectibles-total-collectibles-of-all-partners-for-a-month",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userName",
+							"value": "Professor",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "totalAmountToBePaid",
+							"value": "1500",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "amountPaidInNativeCurrency",
+							"value": "500",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "nativeCurrencyName",
+							"value": "INR",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "amountPaidInForeignCurrency",
+							"value": "13.09",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "foreignCurrencyName",
+							"value": "USD",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "owner",
+							"value": "O=Alliance,L=London,C=GB",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "partnerName",
+							"value": "O=BajajAlliance,L=New York,C=US",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "2020",
+							"type": "text"
+						},
+						{
+							"key": "month",
+							"value": "04",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:50005/api/example/fetch-total-collectibles-of-owner",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50005",
+					"path": [
+						"api",
+						"example",
+						"fetch-total-collectibles-of-owner"
+					]
+				},
+				"description": "get collectibles details for all the partners for a particular month"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
