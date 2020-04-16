@@ -37,6 +37,7 @@ class UserTransactionContract : Contract {
 
             //User transaction state specific constraint
             "The amounts paid should be greater than zero in any one of the payment way." using (out.amountPaidInForeignCurrency>0 || out.amountPaidInNativeCurrency>0)
+            "Total amount should be the sum of amounts paid in native and foreign currency" using (out.amountPaidInNativeCurrency+out.amountPaidInForeignCurrency == out.totalAmountTobePaid)
         }
     }
 

@@ -1,6 +1,7 @@
 package com.insurance.state
 
 import com.insurance.contract.CollectiblesContract
+import com.insurance.contract.ExchangeRateVerificationContract
 import com.insurance.contract.UserRegistrationContract
 import com.insurance.schema.Collectibles
 import com.insurance.schema.Collectibles1
@@ -26,13 +27,11 @@ import net.corda.core.schemas.QueryableState
  * @param date date(month) for which this collectibles state corresponds to.
  */
 //ToDo to remove ExchangeRateState
-@BelongsToContract(CollectiblesContract::class)
+@BelongsToContract(ExchangeRateVerificationContract::class)
 data class ExchangeRateState(   val timeStamp : String,
                                 val exchangeRate : Double,
                                 val foreignCurrencySymbol : String,
                                 val nativeCurrencySymbol : String,
-                                val totalAmount : Double,
-                                val amountPaidInNativeCurrency : Double, //converted to the foreignCurrency based on exchange rate
                                 val owner : Party,
                                 val partner : Party,
                                 val oracle : Party,

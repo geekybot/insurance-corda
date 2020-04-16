@@ -10,9 +10,10 @@ class ExchangeRateValidatorService(private val serviceHub: AppServiceHub) :
         SingletonSerializeAsToken() {
 
     fun validateExchangeRates(nativeCurrencyName : String, foreignCurrencyName : String, exchangeRate : Double) =
-            serviceHub.cordaService(ExchangeRateFinder::class.java).getCurrent(foreignCurrencyName,nativeCurrencyName).let {
-                log.info("Expected exchange rate is $it but the provided exchange rate is $it")
-                require(exchangeRate == it) { "The  exchangeRate is ${it}, not $exchangeRate" }
+            serviceHub.cordaService(ExchangeRateFinder::class.java).getCurrent(nativeCurrencyName,foreignCurrencyName).let {
+                log.info("Expected exchange rate is $it and the provided exchange rate is $it")
+//                require(nativeCurrencyName=="USD" && foreignCurrencyName == "INR") {"************ exhchange com are swapped ************* $nativeCurrencyName as INR and $foreignCurrencyName as USD"}
+                require(it == exchangeRate) { "The  exchangeRate is ${it}, not $exchangeRate" }
             }
 
     private companion object {

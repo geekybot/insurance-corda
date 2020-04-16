@@ -4,6 +4,7 @@ import net.corda.client.jackson.JacksonSupport
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.Banner
 import org.springframework.boot.SpringApplication
+import org.springframework.boot.WebApplicationType
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.context.annotation.Bean
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter
@@ -32,6 +33,6 @@ open class Server {
 fun main(args: Array<String>) {
     val app = SpringApplication(Server::class.java)
     app.setBannerMode(Banner.Mode.OFF)
-    app.isWebEnvironment = true
+    app.setWebApplicationType(WebApplicationType.SERVLET)
     app.run(*args)
 }

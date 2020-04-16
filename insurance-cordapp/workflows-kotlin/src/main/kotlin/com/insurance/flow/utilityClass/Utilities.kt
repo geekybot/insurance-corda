@@ -13,16 +13,27 @@ var rnd: SecureRandom = SecureRandom()
     return salt.toString()
 }
 
- fun parseGivenDateString(date: String): Array<String>? {
-    val d = SimpleDateFormat("dd/mm/yyyy", Locale.ENGLISH).parse(date)
+fun parseGivenDateString(date: String): Array<String>? {
+    println()
+    val d = SimpleDateFormat("dd/MM/yyyy HH:mm:SS", Locale.ENGLISH).parse(date)
     val cal = Calendar.getInstance()
     cal.time = d
-     return (arrayOf(SimpleDateFormat("dd").format(cal.time),SimpleDateFormat("MM").format(cal.time),SimpleDateFormat("YYYY").format(cal.time)))
+    return (arrayOf(SimpleDateFormat("dd").format(cal.time), SimpleDateFormat("MM").format(cal.time), SimpleDateFormat("yyyy").format(cal.time),SimpleDateFormat("HH").format(cal.time),
+            SimpleDateFormat("mm").format(cal.time),SimpleDateFormat("SS").format(cal.time)))
 }
 
- fun parseCurrentDateString():Array<String>{
-    val cal2 = Calendar.getInstance()
-    return (arrayOf(SimpleDateFormat("dd").format(cal2.time),SimpleDateFormat("MM").format(cal2.time),SimpleDateFormat("YYYY").format(cal2.time)))
+fun parseCurrentDateString():String{
+    val formatter = SimpleDateFormat("dd/MM/yyyy HH:mm:SS", Locale.ENGLISH)
+    val cal = Calendar.getInstance()
+    val current = formatter.format(cal.time)
+    return (current)
+}
+
+fun parseStringToDate(data : String):Calendar{
+    val formatter = SimpleDateFormat("dd/MM/yyyy HH:mm:SS", Locale.ENGLISH).parse(data)
+    val calObj = Calendar.getInstance()
+    calObj.time = formatter
+    return calObj
 }
 
 // fun getInForeignCurrency(totalAmountToBePaid: Double,foreignCurrencyName: String): Double{

@@ -31,7 +31,7 @@ class CollectOracleExchangeRateSignature(
 @InitiatedBy(CollectOracleExchangeRateSignature::class)
 class CollectOracleExchangeRateSignatureResponder(private val otherPartySession : FlowSession):FlowLogic<Unit>(){
     @Suspendable
-    override fun call()  {
+    override fun call(){
         val filteredTransaction = otherPartySession.receive<FilteredTransaction>().unwrap{it->it}
         val key = key()
         val isValid = filteredTransaction.checkWithFun {element :Any ->
@@ -39,6 +39,7 @@ class CollectOracleExchangeRateSignatureResponder(private val otherPartySession 
                 (element is Command<*> && element.value is ExchangeRateVerificationContract.Commands.VerifyExchangeRate) ->{
                     val command = element.value as ExchangeRateVerificationContract.Commands.VerifyExchangeRate
                     (key in element.signers).also {
+                        require(command.nativeCurrencyName=="INR" && command.foreignCurrencyName == "USD") {"************ exhchange com are swapped ************* $command.nativeCurrencyName as INR and $command.foreignCurrencyName as USD"}
                         validateExchangeRates(command.nativeCurrencyName,command.foreignCurrencyName,command.exchangeRate)
                     }
                 }
@@ -57,9 +58,10 @@ class CollectOracleExchangeRateSignatureResponder(private val otherPartySession 
     private fun key(): PublicKey = serviceHub.myInfo.legalIdentities.first().owningKey
 
     private fun validateExchangeRates(nativeCurrencyName : String, foreignCurrencyName : String, exchangeRate : Double) =try{
-        serviceHub.cordaService(ExchangeRateValidatorService::class.java).validateExchangeRates(foreignCurrencyName,nativeCurrencyName,exchangeRate)
+        require(nativeCurrencyName=="INR" && foreignCurrencyName == "USD") {"************ exhchange com are swapped ************* $nativeCurrencyName as INR and $foreignCurrencyName as USD"}
+        serviceHub.cordaService(ExchangeRateValidatorService::class.java).validateExchangeRates(nativeCurrencyName,foreignCurrencyName,exchangeRate)
     }catch (e : Exception){
-        throw (IllegalArgumentException(e.stackTrace.toString()))
+        throw (IllegalArgumentException(e.message.toString()))
     }
 
     private companion object {

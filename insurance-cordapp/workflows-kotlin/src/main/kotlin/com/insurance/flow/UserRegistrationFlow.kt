@@ -4,7 +4,7 @@ import co.paralleluniverse.fibers.Suspendable
 import com.insurance.contract.UserRegistrationContract
 import com.insurance.flow.UserRegistrationFLow.Acceptor
 import com.insurance.flow.UserRegistrationFLow.Initiator
-import com.insurance.state.IOUState
+//import com.insurance.state.IOUState
 import com.insurance.state.UserState
 import net.corda.core.contracts.Command
 import net.corda.core.contracts.requireThat

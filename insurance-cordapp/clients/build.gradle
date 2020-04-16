@@ -1,4 +1,4 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+//import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     id 'org.jetbrains.kotlin.jvm'
@@ -51,7 +51,7 @@ dependencies {
     cordapp project(":workflows-kotlin")
 }
 
-tasks.withType(KotlinCompile) {
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile) {
     kotlinOptions {
         languageVersion = "1.2"
         apiVersion = "1.2"

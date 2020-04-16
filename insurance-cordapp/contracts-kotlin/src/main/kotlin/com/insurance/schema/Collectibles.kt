@@ -1,12 +1,13 @@
 package com.insurance.schema
 
-import net.corda.core.identity.Party
+//import com.insurance.state.Analytics
 import net.corda.core.schemas.MappedSchema
 import net.corda.core.schemas.PersistentState
+import org.hibernate.annotations.Type
 import java.util.*
-import javax.persistence.Column
-import javax.persistence.Entity
-import javax.persistence.Table
+import javax.persistence.*
+import kotlin.collections.ArrayList
+
 
 /**
  * The family of schemas for CollectiblesState.
@@ -23,6 +24,7 @@ object Collectibles1 : MappedSchema(
     @Entity
     @Table(name = "CompanyCollectibles")
     class CompanyCollectiblesTable(
+
             @Column(name = "owner")
             var ownerName : String,
 
@@ -38,12 +40,20 @@ object Collectibles1 : MappedSchema(
             @Column(name = "pendingDue")
             var pendingDue: Double,
 
-            @Column(name = "linear_id")
+            @ElementCollection
+            @Column(name = "weeklydata")
+            private val weeklydata: List<String>,
+
+            @ElementCollection
+            @Column(name = "dailydata")
+            private val dailyData: List<String>,
+
+            @Column(name = "linearid")
             var linearId: UUID
 
     ) : PersistentState() {
         // Default constructor required by hibernate.
-        constructor(): this("","",0.0, 0.0,0.0, UUID.randomUUID())
+        constructor(): this("","",0.0, 0.0,0.0, emptyList(), emptyList(),UUID.randomUUID())
     }
 
     @Entity
@@ -73,12 +83,20 @@ object Collectibles1 : MappedSchema(
             @Column(name = "totalInsured")
             var totalInsured: Int,
 
+            @ElementCollection
+            @Column(name = "weeklydata")
+            private val weeklydata: List<String>,
+
+            @ElementCollection
+            @Column(name = "dailydata")
+            private val dailyData: List<String>,
+
             @Column(name = "linear_id")
             var linearId: UUID
 
     ) : PersistentState() {
         // Default constructor required by hibernate.
-        constructor(): this("","","",0.0, 0.0,0.0, 0.0,0,UUID.randomUUID())
+        constructor(): this("","","",0.0, 0.0,0.0, 0.0,0, emptyList(), emptyList(),UUID.randomUUID())
     }
 
     //Todo  remove this after the testing
@@ -113,4 +131,5 @@ object Collectibles1 : MappedSchema(
         // Default constructor required by hibernate.
         constructor(): this("",0.0,"","","","","",UUID.randomUUID())
     }
+
 }

@@ -2,6 +2,8 @@ package com.insurance.state
 
 import com.insurance.contract.CollectiblesContract
 import com.insurance.contract.UserRegistrationContract
+//import com.insurance.schema.AnalyticsSchema1
+//import com.insurance.schema.AnalyticsSchema1
 import com.insurance.schema.Collectibles
 import com.insurance.schema.Collectibles1
 import com.insurance.schema.UserTransactionDetailsSchema1
@@ -13,7 +15,6 @@ import net.corda.core.identity.Party
 import net.corda.core.schemas.MappedSchema
 import net.corda.core.schemas.PersistentState
 import net.corda.core.schemas.QueryableState
-
 /**
  * The state object [CollectiblesState] records the collectibles of a company or a partner involved in the platform.
  *
@@ -33,6 +34,8 @@ data class CollectiblesState(   val totalDue: Double,
                                 val owner: Party,
                                 val partner : Party?,
                                 val date : String,
+                                val weeklyData : List<String>?,
+                                val dailyData : List<String>?,
                                 val count : Int =0,
                                 override val linearId: UniqueIdentifier = UniqueIdentifier()):
         LinearState, QueryableState {
@@ -57,6 +60,8 @@ data class CollectiblesState(   val totalDue: Double,
                             this.pendingDue,
                             this.remittances,
                             this.count,
+                            this.weeklyData!!,
+                            this.dailyData!!,
                             this.linearId.id
                     )
                 }else{
@@ -66,6 +71,8 @@ data class CollectiblesState(   val totalDue: Double,
                             this.totalDue,
                             this.collectedDue,
                             this.pendingDue,
+                            this.weeklyData!! as List<String>,
+                            this.dailyData!! as List<String>,
                             this.linearId.id
                     )
                 }

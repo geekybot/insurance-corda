@@ -1,7 +1,7 @@
 package com.insurance.contract
 
 import com.insurance.state.ExchangeRateState
-import com.insurance.state.IOUState
+//import com.insurance.state.IOUState
 import net.corda.core.contracts.CommandData
 import net.corda.core.contracts.Contract
 import net.corda.core.contracts.requireSingleCommand
@@ -36,9 +36,8 @@ class ExchangeRateVerificationContract : Contract {
             is Commands.VerifyExchangeRate -> requireThat {
                 //ToDo check some other constraints too
                 //Exchange rate specific constraints
-                val outputState = tx.outputStates.single() as ExchangeRateState
-                "Output of totalAmount doesn't correspond with proper exchange rate" using (command.totalAmount == outputState.exchangeRate*outputState.totalAmount)
-                "Output of amount paid in native currency doesn't correspond with proper exchange rate" using (command.amountPaidInNativeCurrency == outputState.amountPaidInNativeCurrency*outputState.exchangeRate)
+                val outputState = tx.outputsOfType<ExchangeRateState>().single()
+                "Output of totalAmount doesn't correspond with proper exchange rate" using (command.exchangeRate == outputState.exchangeRate)
             }
         }
     }
@@ -47,6 +46,6 @@ class ExchangeRateVerificationContract : Contract {
      * This contract only implements one command, Create.
      */
     interface Commands : CommandData {
-        class VerifyExchangeRate(val foreignCurrencyName :String ,val nativeCurrencyName :String,val exchangeRate : Double,val totalAmount : Double, val amountPaidInNativeCurrency : Double) : Commands
+        class VerifyExchangeRate(val foreignCurrencyName :String ,val nativeCurrencyName :String,val exchangeRate : Double) : Commands
     }
 }

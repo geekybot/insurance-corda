@@ -1,7 +1,7 @@
 package com.insurance.state
 
 import com.insurance.contract.UserRegistrationContract
-import com.insurance.schema.IOUSchemaV1
+//import com.insurance.schema.IOUSchemaV1
 import com.insurance.schema.UserDetailsSchema1
 import com.insurance.schema.UserTransactionDetailsSchema
 import net.corda.core.contracts.BelongsToContract

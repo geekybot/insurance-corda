@@ -1,7 +1,7 @@
 package com.insurance.state
 
 import com.insurance.contract.UserRegistrationContract
-import com.insurance.schema.IOUSchemaV1
+//import com.insurance.schema.IOUSchemaV1
 import net.corda.core.contracts.BelongsToContract
 import net.corda.core.contracts.ContractState
 import net.corda.core.contracts.LinearState
@@ -26,21 +26,7 @@ data class IOUState(val value: Int,
                     val lender: Party,
                     val borrower: Party,
                     override val linearId: UniqueIdentifier = UniqueIdentifier()):
-        LinearState, QueryableState {
+        LinearState  {
     /** The public keys of the involved parties. */
     override val participants: List<AbstractParty> get() = listOf(lender, borrower)
-
-    override fun generateMappedObject(schema: MappedSchema): PersistentState {
-        return when (schema) {
-            is IOUSchemaV1 -> IOUSchemaV1.PersistentIOU(
-                    this.lender.name.toString(),
-                    this.borrower.name.toString(),
-                    this.value,
-                    this.linearId.id
-            )
-            else -> throw IllegalArgumentException("Unrecognised schema $schema")
-        }
-    }
-
-    override fun supportedSchemas(): Iterable<MappedSchema> = listOf(IOUSchemaV1)
 }
