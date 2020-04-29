@@ -18,11 +18,10 @@ class ExchangeRateFinder(private  val serviceHub: AppServiceHub) :
     fun getCurrent(nativeCurrencySymbol: String, foreignCurrencySymbol: String): kotlin.Double {
         parameterName = "$nativeCurrencySymbol" + "_" + "$foreignCurrencySymbol"
         val response = client.newCall(  Request.Builder().url("https://free.currconv.com/api/v7/convert?q=$parameterName&compact=ultra&apiKey=4bdd51f55edb36a7456c").build()).execute()
-//        return response.body()?.let {
-//            val json = it.string()
-//            val tree = mapper.readTree(json)
-//            tree[parameterName].toString().toDouble()
-//        } ?: throw IllegalArgumentException("No response") as Throwable
-        return 0.013
+       return response.body()?.let {
+           val json = it.string()
+           val tree = mapper.readTree(json)
+           tree[parameterName].toString().toDouble()
+       } ?: throw IllegalArgumentException("No response") as Throwable
     }
 }
